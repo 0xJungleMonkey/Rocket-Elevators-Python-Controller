@@ -14,7 +14,6 @@ https://docs.pytest.org/en/6.2.x/getting-started.html
 ### Running the tests
 
 To launch the tests:
-
 `pytest`
 
 With a fully completed project, you should get an output like:
