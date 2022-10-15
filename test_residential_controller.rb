@@ -1,7 +1,69 @@
-import residential_controller
-import copy
-import pytest
-from unittest import mock
+require "residential_controller"
+describe Column do
+    column1 = Column.new(1, 10, 2)
+    describe initialize(_id, _amountOfElevators,_amountOfFloors)do
+        expect(type(column1)) is Column
+        expect(@column_ID).to eq 1
+        expect(@column_status).to eq 'Online'
+        expect(len(@column_elevatorList)) is 2
+        expect(type(@column_elevatorList[0])) is Elevator
+        expect(len(@column_callButtonList)) is 18
+        expect(type(@column_callButtonList[0])) is CallButton
+    end  
+    describe createCallButtons(_amountOfFloors) do
+        expect(callButtonList.length).to eq 18
+    end
+    describe createElevators( _amountOfElevators, _amountOfFloors) do
+        expect(elevatorList.length).to eq 2
+    end
+    def test_Has_a_requestElevator_method():
+        assert column1.requestElevator(1, "up") != None
+    
+    describe requestElevator(1, "up")do
+        expect(requestElevator).to eq 1
+    end 
+
+end
+
+end
+describe Elevator do 
+
+end
+describe CallButton do
+end 
+describe FloorRequestButton do 
+end 
+describe Door do
+end
+
+describe StringCalculator do
+
+    describe ".add" do
+      context "given '4'" do
+        it "returns 4" do
+          expect(StringCalculator.add("4")).to eql(4)
+        end
+      end
+  
+      context "given '10'" do
+        it "returns 10" do
+          expect(StringCalculator.add("10")).to eql(10)
+        end
+      end
+    end
+  end
+  
+  class StringCalculator
+
+    def self.add(input)
+      if input.empty?
+        0
+      else
+        input.to_i
+      end
+    end
+  end
+
 
 Column = residential_controller.Column
 Elevator = residential_controller.Elevator
@@ -39,18 +101,6 @@ def moveAllElevators(column):
         while len(elevator.floorRequestList) != 0:
             elevator.move()
 
-def test_Instantiates_a_Column_with_valid_attributes():
-    
-    assert type(column1) is Column
-    assert column1.ID == 1
-    assert column1.status is not None
-    assert len(column1.elevatorList) is 2
-    assert type(column1.elevatorList[0]) is Elevator
-    assert len(column1.callButtonList ) is 18
-    assert type(column1.callButtonList [0]) is CallButton
-
-def test_Has_a_requestElevator_method():
-    assert column1.requestElevator(1, "up") != None
 
 def test_Can_find_and_return_an_elevator():
     elevator = column1.requestElevator(1, "up")
