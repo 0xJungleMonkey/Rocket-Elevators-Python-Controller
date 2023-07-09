@@ -1,5 +1,13 @@
 # Rocket-Elevators-Python-Controller
-This is the template to use for the python residential controller. You will find the classes that should be used along with some methods described in the requirements. The necessary file to run some tests is also included. 
+This project is part of my second coding bootcamp project (October 2022) and implements an elevator control system design that passes all the provided tests. 
+
+## Introduction
+The Elevator Control System is designed to manage and control the movement of elevators within a building. It provides functions and algorithms to handle elevator requests, floor destinations, and elevator state management. 
+
+## Other Language version:
+[Javascript](https://github.com/0xJungleMonkey/Rocket-Elevators-Javascript-Controller/)
+[C#](https://github.com/0xJungleMonkey/Rocket-Elevators-Controller-CSharp)
+[Golang](https://github.com/0xJungleMonkey/Rocket-Elevators-Controller-Golang)
 
 ### Installation
 
@@ -28,6 +36,3 @@ which should give something like:
 
 ![Screenshot from 2021-06-15 13-13-33](https://user-images.githubusercontent.com/28630658/122095759-c74a4f80-cddb-11eb-999d-dfe35dbe7d18.png)
 
-The test file can be left in your final project but no scenarios should be present in your code. The grader will run tests similar to the ones provided.
-
-Of course, make sure to edit this Readme file to describe your own project!
